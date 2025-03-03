@@ -39,5 +39,5 @@ all: test module.tar.gz
 
 setup:
 ifeq ($(VIAM_TARGET_OS), linux)
-	sudo apt-get install libopencv-dev
+	sudo apt-get install -y libopencv-dev
 endif
