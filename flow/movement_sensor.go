@@ -14,7 +14,6 @@ import (
 
 var Model = viamstereocamera.NamespaceFamily.WithModel("flow-movement-sensor")
 
-
 func init() {
 	resource.RegisterComponent(movementsensor.API, Model,
 		resource.Registration[movementsensor.MovementSensor, *Config]{
@@ -24,7 +23,7 @@ func init() {
 }
 
 type Config struct {
-	Left string
+	Left  string
 	Right string
 }
 
@@ -66,7 +65,7 @@ func newFlow(ctx context.Context, deps resource.Dependencies, rawConf resource.C
 func NewFlow(ctx context.Context, deps resource.Dependencies, name resource.Name, conf *Config, logger logging.Logger) (movementsensor.MovementSensor, error) {
 
 	cancelCtx, cancelFunc := context.WithCancel(context.Background())
-	
+
 	f := &flow{
 		name:       name,
 		logger:     logger,
@@ -92,7 +91,6 @@ func (f *flow) Name() resource.Name {
 	return f.name
 }
 
-
 func (f *flow) DoCommand(ctx context.Context, cmd map[string]interface{}) (map[string]interface{}, error) {
 	return nil, nil
 }
@@ -101,4 +99,3 @@ func (f *flow) Close(context.Context) error {
 	f.cancelFunc()
 	return nil
 }
-

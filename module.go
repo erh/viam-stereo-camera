@@ -2,8 +2,8 @@ package viamstereocamera
 
 import (
 	"context"
-	"fmt"
 	"errors"
+	"fmt"
 
 	"go.viam.com/rdk/components/camera"
 	"go.viam.com/rdk/logging"
@@ -25,18 +25,18 @@ func init() {
 }
 
 type Config struct {
-	Left string
+	Left  string
 	Right string
 
-	DistanceMeters float64 `json:"distance-meters"`
+	DistanceMeters    float64 `json:"distance-meters"`
 	FocalLengthPixels float64 `json:"focal-length-pixels"`
 
 	MinDisparity float64 `json:"max-disparity"`
 	MaxDisparity float64 `json:"min-disparity"`
-	
+
 	// DisparityStep controls how many pixels to skip when comparing (higher = faster but less dense)
 	DisparityStep int
-	
+
 	// PixelStep controls how many pixels to skip in the image (higher = faster but less dense)
 	PixelStep int
 }
@@ -135,7 +135,6 @@ func (s *viamStereoCameraStereoCamera) Name() resource.Name {
 	return s.name
 }
 
-
 func (s *viamStereoCameraStereoCamera) DoCommand(ctx context.Context, cmd map[string]interface{}) (map[string]interface{}, error) {
 	return nil, nil
 }
@@ -176,15 +175,14 @@ func (s *viamStereoCameraStereoCamera) NextPointCloud(ctx context.Context) (poin
 	}
 
 	c := StereoPCDConfig{
-		Baseline: s.cfg.DistanceMeters,
+		Baseline:    s.cfg.DistanceMeters,
 		FocalLength: s.cfg.FocalLengthPixels,
 
 		MinDisparity: s.cfg.getMinDisparity(),
 		MaxDisparity: s.cfg.getMaxDisparity(),
 
 		DisparityStep: s.cfg.getDisparityStep(),
-		PixelStep: s.cfg.getPixelStep(),
-
+		PixelStep:     s.cfg.getPixelStep(),
 	}
 	return StereoToPointCloud(leftAll[0].Image, rightAll[0].Image, c)
 }

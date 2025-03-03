@@ -19,11 +19,10 @@ import (
 	"go.viam.com/rdk/pointcloud"
 	"go.viam.com/rdk/spatialmath"
 
-	
-	"viamstereocamera"
+	"go.viam.com/rdk/components/arm"
 	"go.viam.com/rdk/logging"
 	"go.viam.com/rdk/resource"
-	"go.viam.com/rdk/components/arm"
+	"viamstereocamera"
 )
 
 func main() {
