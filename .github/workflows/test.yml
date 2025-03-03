@@ -24,4 +24,4 @@ jobs:
       run: make test
 
     - name: Compile Module
-      run: make module.tar.gz
+      run: make modulex.tar.gz
