@@ -177,8 +177,9 @@ func (f *flow) tooOld() error {
 	if f.lastError != nil {
 		return f.lastError
 	}
-	if time.Since(f.lastUpdate) > time.Second {
-		return fmt.Errorf("no update since %v", f.lastUpdate)
+	diff := time.Since(f.lastUpdate)
+	if diff > time.Second {
+		return fmt.Errorf("no update since %v : ago : %v", f.lastUpdate, diff)
 	}
 	return nil
 }
@@ -231,10 +232,11 @@ func (f *flow) doLoop(state *loopState) error {
 func (f *flow) run() {
 	state := loopState{}
 	for f.cancelCtx.Err() == nil {
+		start := time.Now()
 		f.lastError = f.doLoop(&state)
 		if f.lastError != nil {
 			f.lastUpdate = time.Now()
 		}
-		time.Sleep(500 * time.Millisecond)
+		time.Sleep((500 * time.Millisecond) - time.Since(start))
 	}
 }
