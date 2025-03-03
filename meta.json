@@ -1,0 +1,26 @@
+{
+  "$schema": "https://dl.viam.dev/module.schema.json",
+  "module_id": "erh:viam-stereo-camera",
+  "visibility": "public",
+  "url": "",
+  "description": "stereo-camera",
+  "models": [
+      {
+          "api": "rdk:component:camera",
+          "model": "erh:viam-stereo-camera:stereo-camera",
+          "short_description": "2 images to pcd",
+        "markdown_link": "README.md#model-erhviam-stereo-camerastereo-camera"
+      }
+  ],
+  "entrypoint": "bin/viam-stereo-camera",
+  "first_run": "",
+  "build": {
+    "build": "make module.tar.gz",
+    "setup": "make setup",
+    "path": "bin/module.tar.gz",
+    "arch": [
+      "linux/amd64",
+      "linux/arm64"
+    ]
+  }
+}
