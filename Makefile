@@ -38,4 +38,6 @@ module: test module.tar.gz
 all: test module.tar.gz
 
 setup:
-	go mod tidy
+	ifeq ($(VIAM_TARGET_OS), linux)
+		sudo apt-get install libopencv-dev
+	endif
