@@ -10,7 +10,7 @@ ifeq ($(VIAM_TARGET_OS), windows)
 endif
 
 ifeq ($(VIAM_TARGET_OS), linux)
-	GO_BUILD_ENV += CGO_LDFLAGS='-ltbb'
+	GO_BUILD_ENV += CGO_LDFLAGS='-ltbb -ltbbmalloc'
 endif
 
 $(MODULE_BINARY): Makefile go.mod *.go cmd/module/*.go flow/*.go

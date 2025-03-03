@@ -29,9 +29,6 @@ jobs:
       with:
         go-version: '1.23'
 
-    - name: Install Things
-      run: apt install -y libtbb-dev
-        
     - name: Test
       run: VIAM_TARGET_OS=${{matrix.target_os}} make test
 
