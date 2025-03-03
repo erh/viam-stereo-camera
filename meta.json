@@ -17,7 +17,6 @@
             "short_description": "optical flow",
             "markdown_link": "README.md#flow-movement-sensor"
         }
-
     ],
     "entrypoint": "bin/viam-stereo-camera",
     "first_run": "",

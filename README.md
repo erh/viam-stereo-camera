@@ -22,7 +22,7 @@ The following attribute template can be used to configure this model:
 }
 ```
 
-## Model erh:viam-stereo-camera:flow-movement-sensor
+## flow-movement-sensor
 ```json
 {
     "left": "cam-left-top",
