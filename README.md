@@ -22,3 +22,11 @@ The following attribute template can be used to configure this model:
 }
 ```
 
+## Model erh:viam-stereo-camera:flow-movement-sensor
+```json
+{
+    "left": "cam-left-top",
+    "right": "cam-right-top",
+    "focal-length" : 30
+}
+```

@@ -10,7 +10,14 @@
             "model": "erh:viam-stereo-camera:stereo-camera",
             "short_description": "2 images to pcd",
             "markdown_link": "README.md#model-erhviam-stereo-camerastereo-camera"
+        },
+        {
+            "api": "rdk:component:movement_sensor",
+            "model": "erh:viam-stereo-camera:flow-movement-sensor",
+            "short_description": "optical flow",
+            "markdown_link": "README.md#flow-movement-sensor"
         }
+
     ],
     "entrypoint": "bin/viam-stereo-camera",
     "first_run": "",
