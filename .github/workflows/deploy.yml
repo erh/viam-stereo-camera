@@ -19,7 +19,7 @@ jobs:
             target_arch: arm64
 
     runs-on: ${{ matrix.runner }}
-    container: ghcr.io/hybridgroup/opencv:4.11.0-static
+    container: ghcr.io/hybridgroup/opencv:4.11.0
     
     steps:
     - uses: actions/checkout@v4
@@ -28,6 +28,9 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version: '1.23'
+
+    - name: Install Things
+      run: apt install -y libtbb-dev
         
     - name: Test
       run: make test
