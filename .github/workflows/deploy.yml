@@ -43,6 +43,6 @@ jobs:
         module-path: module.tar.gz
         platform: ${{ matrix.platform }}
         version: ${{ github.ref_name }}
-        key-id: ${{ secrets.VIAM_DEV_API_KEY_ID }}
-        key-value: ${{ secrets.VIAM_DEV_API_KEY }}
+        key-id: ${{ secrets.VIAM_KEY_ID }}
+        key-value: ${{ secrets.VIAM_KEY_VALUE }}
 
