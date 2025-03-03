@@ -33,7 +33,7 @@ jobs:
       run: make test
 
     - name: Compile Module
-      run: make modulex.tar.gz
+      run: make module.tar.gz
 
 
     - name: Upload viamrtsp module to registry
