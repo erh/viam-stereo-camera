@@ -13,15 +13,14 @@ jobs:
             runner: ubuntu-latest
             target_os: linux
             target_arch: amd64
-            docker_image: ghcr.io/hybridgroup/opencv:4.11.0
           - platform: linux/arm64
             runner: buildjet-8vcpu-ubuntu-2204-arm
             target_os: linux
             target_arch: arm64
-            docker_image: ghcr.io/hybridgroup/opencv:4.11.0
-            
-    runs-on: ${{ matrix.runner }}
 
+    runs-on: ${{ matrix.runner }}
+    container: ghcr.io/hybridgroup/opencv:4.11.0
+    
     steps:
     - uses: actions/checkout@v4
 
