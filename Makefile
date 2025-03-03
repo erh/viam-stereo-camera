@@ -38,6 +38,4 @@ module: test module.tar.gz
 all: test module.tar.gz
 
 setup:
-ifeq ($(VIAM_TARGET_OS), linux)
-	sudo apt update && sudo apt install -y libopencv-dev
-endif
+
