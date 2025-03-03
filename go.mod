@@ -4,8 +4,9 @@ go 1.23
 
 require (
 	github.com/golang/geo v0.0.0-20210211234256-740aa86cb551
+	github.com/kellydunn/golang-geo v0.7.0
 	go.viam.com/rdk v0.64.1
-	go.viam.com/utils v0.1.130
+	gocv.io/x/gocv v0.40.0
 )
 
 require (
@@ -68,7 +69,6 @@ require (
 	github.com/improbable-eng/grpc-web v0.15.0 // indirect
 	github.com/jedib0t/go-pretty/v6 v6.4.6 // indirect
 	github.com/jhump/protoreflect v1.15.6 // indirect
-	github.com/kellydunn/golang-geo v0.7.0 // indirect
 	github.com/klauspost/compress v1.17.7 // indirect
 	github.com/kylelemons/go-gypsy v1.0.0 // indirect
 	github.com/lestrrat-go/backoff/v2 v2.0.8 // indirect
@@ -132,6 +132,7 @@ require (
 	go.uber.org/zap v1.27.0 // indirect
 	go.viam.com/api v0.1.388 // indirect
 	go.viam.com/test v1.2.4 // indirect
+	go.viam.com/utils v0.1.130 // indirect
 	golang.org/x/crypto v0.28.0 // indirect
 	golang.org/x/exp v0.0.0-20240904232852-e7e105dedf7e // indirect
 	golang.org/x/image v0.19.0 // indirect
