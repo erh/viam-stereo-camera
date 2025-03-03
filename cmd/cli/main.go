@@ -2,26 +2,11 @@ package main
 
 import (
 	"context"
-	"fmt"
-	"image"
-	"math"
-	"os"
-	"strconv"
-
-	"context"
-	"fmt"
-	"image"
-	"image/color"
-	"math"
-	"os"
-	"strconv"
-
-	"go.viam.com/rdk/pointcloud"
-	"go.viam.com/rdk/spatialmath"
 
 	"go.viam.com/rdk/components/arm"
 	"go.viam.com/rdk/logging"
 	"go.viam.com/rdk/resource"
+
 	"viamstereocamera"
 )
 
